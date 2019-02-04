@@ -60,11 +60,9 @@ public class Helpers {
                             public void run() {
                                 if(id == -1){
                                     SavedEncryptionDatabase.getInstance(context).savedEncryptionDao().insertSE(savedEncryption);
-                                    //Log.e("SaveDialog", "New SavedEncryption created");
                                 }
                                 else{
-                                    SavedEncryptionDatabase.getInstance(context).savedEncryptionDao().updateSavedEncryption(savedEncryption);
-                                    //Log.e("SaveDialog", "Updated SavedEncryption");
+                                    SavedEncryptionDatabase.getInstance(context).savedEncryptionDao().updateSavedEncryption(savedEncryption);                  
                                   }
                             }
                         }).start();
@@ -156,11 +154,9 @@ public class Helpers {
 
                                 if(id == -1){
                                     SavedEncryptionDatabase.getInstance(context).savedEncryptionDao().insertSE(savedEncryption);
-                                    //Log.e("SaveDialog", "New SavedEncryption created");
                                 }
                                 else{
                                     SavedEncryptionDatabase.getInstance(context).savedEncryptionDao().updateSavedEncryption(savedEncryption);
-                                    //Log.e("SaveDialog", "Updated SavedEncryption");
                                 }
                             }
                         }).start();
@@ -230,11 +226,9 @@ public class Helpers {
 
                                 if(id == -1){
                                     SavedEncryptionDatabase.getInstance(context).savedEncryptionDao().insertSE(savedEncryption);
-                                    //Log.e("SaveDialog", "New SavedEncryption created");
                                 }
                                 else{
                                     SavedEncryptionDatabase.getInstance(context).savedEncryptionDao().updateSavedEncryption(savedEncryption);
-                                    //Log.e("SaveDialog", "Updated SavedEncryption");
                                 }
                             }
                         }).start();
