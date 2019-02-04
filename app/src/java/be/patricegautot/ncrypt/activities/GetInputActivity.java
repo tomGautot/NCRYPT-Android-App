@@ -79,8 +79,6 @@ public class GetInputActivity extends AppCompatActivity {
         if(inIntent.hasExtra(Keys.KEY_TYPE)){
             type = inIntent.getStringExtra(Keys.KEY_TYPE);
 
-            //Log.e(TAG, "type : " + type);
-
             if(type.equals(Keys.TYPE_IMAGE)){
 
                 if(inIntent.hasExtra(Keys.KEY_BASE_SE)){
@@ -210,12 +208,8 @@ public class GetInputActivity extends AppCompatActivity {
             } else if (action.equals(Keys.ACTION_DECRYPT)){
                 output = Crypting.dCrypt(input, key);
             } else {
-                //Log.e(TAG, "Intent extra problem");
                 return;
             }
-
-            //Log.e(TAG, "input.lenght = " + input.length() + "   output.length = " + output.length());
-
 
 
             Intent intent = new Intent(GetInputActivity.this, OutputActivity.class);
@@ -293,11 +287,9 @@ public class GetInputActivity extends AppCompatActivity {
                     options.inJustDecodeBounds = true;
                     BitmapFactory.decodeFile(filepath, options);
                     options.inSampleSize = Helpers.calculateInSampleSize(options, 1024, 1024);
-                    //Log.e(TAG,"importing bitmap using sample size " + Helpers.calculateInSampleSize(options, 1024, 1024));
 
                     options.inJustDecodeBounds = false;
                     bitmap = BitmapFactory.decodeFile(filepath, options);
-                    //Log.e(TAG, "path : " + filepath + " bitmap is Null : " + ((bitmap.equals(null)) ? "1" : "0") );
                     image.setImageBitmap(bitmap);
                     progressBar.setVisibility(View.GONE);
                     hintText.setVisibility(View.GONE);
@@ -329,14 +321,11 @@ public class GetInputActivity extends AppCompatActivity {
     }
 
     private boolean showAd(){
-        //Log.e(TAG, "Try to show ad");
         if (mInterstitialAd.isLoaded()) {
 
             int r = Helpers.randomNumberInRange(1, 3);
-            //Log.e(TAG, "ad should be showing: " + r);
             if(r == 1) mInterstitialAd.show();
         } else {
-            //Log.e(TAG, "The interstitial wasn't loaded yet.");
         }
         return true;
     }
