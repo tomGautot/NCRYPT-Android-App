@@ -25,7 +25,6 @@ public class Crypting {
         dataSetup();
 
         String key = unique16bitKeyString(inputKey);
-        //Log.e(TAG, "key for inputKey " + inputKey + " is " + key);
 
         String out = "";
 
@@ -59,7 +58,6 @@ public class Crypting {
         dataSetup();
 
         String key = unique16bitKeyString(inputKey);
-        //Log.e(TAG, "key for inputKey " + inputKey + " is " + key);
 
         String out = "";
 
@@ -95,13 +93,9 @@ public class Crypting {
 
         inputKey = genStringKeyFromKey(inputKey);
 
-        //Log.e(TAG, "NCRYPT, input key is " + inputKey);
 
         long[] key = unique256bitKeyArray(inputKey);
         long keyLength = key.length;
-
-        //Log.e(TAG, "NCRYPT key first vals : " + key[0] + " " + key[1] + " " + key[2] + " " + key[3] + " "
-        //        + key[4] + " " + key[5] + " " + key[6] + " " + key[7]  + " " + key[8] + " " + key[9] + " " + key[10] + " ");
 
         long red, green, blue, redOffset, greenOffset, blueOffset, holderR, holderG, holderB;
 
@@ -165,13 +159,8 @@ public class Crypting {
 
         inputKey = genStringKeyFromKey(inputKey);
 
-        //Log.e(TAG, "DCRYPT, input key is " + inputKey);
-
         long[] key = unique256bitKeyArray(inputKey);
         long keyLength = key.length;
-
-        //Log.e(TAG, "DCRYPT key first vals : " + key[0] + " " + key[1] + " " + key[2] + " " + key[3] + " "
-         //       + key[4] + " " + key[5] + " " + key[6] + " " + key[7]  + " " + key[8] + " " + key[9] + " " + key[10] + " ");
 
         long red, green, blue, redOffset, greenOffset, blueOffset, holderR, holderG, holderB;
         for(long i = 0; i < pixels.length; i++){
@@ -328,10 +317,9 @@ public class Crypting {
     private static void dataSetup() {
         if(setup) return;
 
-        //Log.e(TAG, "Setting data up");
-
         setup = true;
-
+        
+        // ALL THE SUPPORTED CHARACTERS
         chars = new char[] {'.', 'w', 'L', '9', '(', 'W', 'l', ':', '8', 'a', 'B', ';', '7', 'b', 'A', '!', '*',
                 '6', 'x', 'M', 'm', 'X', '5', 'y', ')', 'N', '4', '%', 'c', 'D', '1', 'C', '+', 'd', '3', 'z', '?',
                 'O', '2', '@', 'o', 'Z', 'p', 'E', 'q', '=', 'H', 'r', 'G', ',', 'u', '-', 'F', 't', 'I', '\'', 's',
@@ -347,7 +335,7 @@ public class Crypting {
 
         for(int i = 0; i < charDataSize; i++){
             if(charMapCheckUniqueness.containsKey(chars[i])){
-                //Log.e(TAG, "twice char " + chars[i]);
+                
             } else {
                 charMapCheckUniqueness.put(chars[i], 1);
             }
@@ -355,7 +343,6 @@ public class Crypting {
             charMap.put(chars[i], i);
         }
 
-        //Log.e(TAG, "Data is all set up");
     }
 
     public static String illegalCharacters(String in){
