@@ -2,10 +2,10 @@ package be.patricegautot.ncrypt.helpers;
 
 public class Keys {
 
-    public static final String ADDMOB_APP_ID = "ca-app-pub-4219242809085337~6433116727";
-    public static final String ADDMOB_ENCRTPTED_AD_ID = "ca-app-pub-4219242809085337/3692484881";
-    public static final String ADDMOB_DECRTPTED_AD_ID = "ca-app-pub-4219242809085337/1757829954";
-    public static final String ADDMOB_TEST_AD_ID = "ca-app-pub-3940256099942544/1033173712";
+    public static final String ADDMOB_APP_ID = "You ain't gonna get that";
+    public static final String ADDMOB_ENCRTPTED_AD_ID = "Nor that";
+    public static final String ADDMOB_DECRTPTED_AD_ID = "This neither";
+    public static final String ADDMOB_TEST_AD_ID = "Nor this cuz i don't want you to";
 
     public static final String ACTION_ENCRYPT = "Encrypt_Action";
     public static final String ACTION_DECRYPT = "Decrypt_Action";
