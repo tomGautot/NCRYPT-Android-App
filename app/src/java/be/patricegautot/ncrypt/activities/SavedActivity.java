@@ -41,8 +41,6 @@ public class SavedActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saved);
 
-        //Log.e("SavedActivity", "creating content");
-
         Intent intent = getIntent();
 
         if(intent.hasExtra(Keys.KEY_TYPE)) type = intent.getStringExtra(Keys.KEY_TYPE);
@@ -64,7 +62,6 @@ public class SavedActivity extends AppCompatActivity {
         emptyListTV = findViewById(R.id.empty_list_tv);
         progressBar = findViewById(R.id.progress_bar);
 
-        //Log.e("SavedActivity", "Finished Content");
     }
 
     private void setupLiveData() {
@@ -87,7 +84,6 @@ public class SavedActivity extends AppCompatActivity {
             public void onChanged(@Nullable List<SavedEncryption> savedEncryptions) {
                 if(SharedPreferencesHelper.getSavedOrder(SavedActivity.this).equals(getString(R.string.settings_order_by_new_to_old))) {
                     Collections.reverse(savedEncryptions);
-                    //Log.e("SvdActvt", "From newest to oldest: " + SharedPreferencesHelper.getSavedOrder(SavedActivity.this));
                 }
                 adapter.setData(savedEncryptions);
                 adapter.notifyDataSetChanged();
@@ -95,7 +91,6 @@ public class SavedActivity extends AppCompatActivity {
                 if(savedEncryptions.size() == 0) emptyListTV.setVisibility(View.VISIBLE);
                 else                            {recyclerView.setVisibility(View.VISIBLE); emptyListTV.setVisibility(View.GONE);}
                 recyclerView.setAdapter(adapter);
-                //Log.e("SAvedActivity-SetupLD", "there are " + savedEncryptions.size() + " elements in adapter and " + recyclerView.getAdapter().getItemCount() + " elems in recyclerview");
             }
         });
     }
