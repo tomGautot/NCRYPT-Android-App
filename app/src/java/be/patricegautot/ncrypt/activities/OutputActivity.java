@@ -88,7 +88,6 @@ public class OutputActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     Helpers.saveDialog(OutputActivity.this, output, "", "", -1);
-                    //Log.e(TAG, "We are post dialog?");
                 }
             });
         } else if(type.equals(Keys.TYPE_IMAGE)) {
@@ -107,12 +106,9 @@ public class OutputActivity extends AppCompatActivity {
                     options.inJustDecodeBounds = true;
                     BitmapFactory.decodeFile(filepath, options);
                     options.inSampleSize = Helpers.calculateInSampleSize(options, 1024, 1024);
-                    //Log.e(TAG,"importing bitmap using sample size " + Helpers.calculateInSampleSize(options, 1024, 1024) +"  initial bitmap size is " + options.outHeight + "x" + options.outWidth);
 
                     options.inJustDecodeBounds = false;
                     final Bitmap bitmap = BitmapFactory.decodeFile(filepath, options);
-                    //Log.e(TAG, "path : " + filepath + " bitmap is Null : " + ((bitmap.equals(null)) ? "1" : "0") );
-                    //Log.e(TAG, "before bitmap size : " + bitmap.getWidth() + "x" + bitmap.getHeight());
                     int[] pixels = new int[bitmap.getWidth() * bitmap.getHeight()];
                     int[] newPixels;
                     bitmap.getPixels(pixels, 0, bitmap.getWidth(), 0, 0, bitmap.getWidth(), bitmap.getHeight());
@@ -121,7 +117,6 @@ public class OutputActivity extends AppCompatActivity {
                     else                                    newPixels = Crypting.dCryptBitmap(pixels, intent.getStringExtra(Keys.KEY_KEY));
 
                     final Bitmap newBitmap = Bitmap.createBitmap(newPixels, bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_8888);
-                    //Log.e(TAG, "after bitmap size : " + bitmap.getWidth() + "x" + bitmap.getHeight());
 
                     OutputActivity.this.runOnUiThread(new Runnable() {
                         @Override
