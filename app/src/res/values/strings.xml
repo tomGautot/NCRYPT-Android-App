@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">NCRYPT</string>
+
+    <string name="key_length_error">The key needs to be at least 4 characters long</string>
+    <string name="input_char_error">You can\'t use any of the following characters: </string>
+
+    <string name="tag">tag</string>
+
+    <string name="cm_option_edit">Edit</string>
+    <string name="cm_option_delete">Delete</string>
+    <string name="cm_option_decrypt">Decrypt</string>
+    <string name="nothing_saved_empty">You haven\'t saved anything yet!</string>
+    <string name="click_here_to_import_a_picture">Click here to import a picture</string>
+    <string name="image_gallery_save_text">Are you sure you want to save this picture to the gallery</string>
+    <string name="save_text_alertdialog">SAVE</string>
+    <string name="cancel_text_alertdialog">CANCEL</string>
+
+    <string name="settings_title">Settings</string>
+
+    <string name="settings_order_by_key">SETTINGS_ORDER_BY_KEY</string>
+    <string name="settings_order_by_label">Saved Texts/Images Order</string>
+    <string name="settings_order_by_new_to_old">Newest to oldest</string>
+    <string name="settings_order_by_old_to_new">Oldest to newest</string>
+
+    <string name="Contact_page_title">CONTACT ME</string>
+    <string name="contact_email_header"  >   ● Email:   </string>
+    <string name="contact_email">tgautot.contact@gmail.com</string>
+    <string name="contact_twitter_header">   ● Twitter: </string>
+    <string name="contact_twitter"><a href="https://twitter.com/Tom_Gautot" title="Twitter">\@Tom_Gautot</a></string>
+
+    <string name="toast_copied_to_clipboard">The text was copied to the clipboard</string>
+    <string name="dont_ask_me_again">Don\'t ask me again</string>
+    <string name="settings_quick_delete_key">SETTINGS_QUICK_DELETE_KEY</string>
+    <string name="settings_quick_delete_title">Enable quick delete</string>
+
+    <string name="dialog_cancel">CANCEL</string>
+    <string name="dialog_delete">DELETE</string>
+    <string name="dialog_delete_se_message">Do you really want to delete this?\nThis action cannot be undone.</string>
+</resources>

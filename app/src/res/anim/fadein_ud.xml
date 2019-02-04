@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@anim/verydecel_interpolator"
+    android:shareInterpolator="true"
+    android:duration="1000">
+
+    <set
+        android:startOffset="400">
+
+        <alpha
+            android:interpolator="@anim/veryaccel_interpolator"
+            android:fromAlpha="0.0"
+            android:toAlpha="1.0"
+
+            android:duration="600" />
+    </set>
+
+
+    <translate
+        android:interpolator="@anim/verydecel_interpolator"
+        android:fromYDelta="-100%p"
+        android:toYDelta="0%p"
+        android:duration="1000"/>
+
+</set>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorBlack"/>
+
+    <RelativeLayout android:layout_height="wrap_content" android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:paddingLeft="24dp"
+        android:paddingRight="6dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <TextView
+            android:id="@+id/SE_title"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="SALOPE"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/SE_hint"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="SALOPE"
+            android:textColor="@color/textColorKeyHint"
+            android:textStyle="italic"
+            android:layout_below="@+id/SE_title"
+            android:textSize="16sp"/>
+
+        <ImageButton
+            android:id="@+id/SE_menu_btn"
+            android:layout_width="40dp"
+            android:layout_height="55dp"
+            android:scaleType="fitCenter"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/vertical_dots_menu"
+            android:background="?attr/selectableItemBackground"/>
+
+    </RelativeLayout>
+</LinearLayout>

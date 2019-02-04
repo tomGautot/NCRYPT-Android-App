@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="57dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/copy_btn"
+            android:background="?attr/selectableItemBackground"
+            android:id="@+id/btn_copy"
+            android:layout_margin="12dp"/>
+
+        <ImageButton
+            android:id="@+id/btn_save"
+            android:layout_width="80dp"
+            android:layout_height="57dp"
+            android:scaleType="fitCenter"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/save_btn"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="12dp"/>
+
+        <TextView
+            android:id="@+id/out_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_copy"
+            android:padding="16dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/colorBlack"
+            />
+
+        <ImageView
+            android:id="@+id/out_imv"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:background="@color/colorTransparent"
+            android:padding="16dp"
+            android:layout_below="@+id/btn_save"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_below="@+id/btn_save"
+            android:id="@+id/progress_bar_container">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

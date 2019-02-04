@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="cm_options">
+        <item>@string/cm_option_edit</item>
+        <item>@string/cm_option_delete</item>
+        <item>@string/cm_option_decrypt</item>
+    </array>
+
+    <array name="settings_order_by_options">
+        <item>@string/settings_order_by_new_to_old</item>
+        <item>@string/settings_order_by_old_to_new</item>
+    </array>
+</resources>

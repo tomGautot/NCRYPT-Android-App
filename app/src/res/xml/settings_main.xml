@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_title" android:layout_height="match_parent" android:layout_width="match_parent">
+
+    <ListPreference
+        android:defaultValue="@string/settings_order_by_new_to_old"
+        android:entries="@array/settings_order_by_options"
+        android:entryValues="@array/settings_order_by_options"
+        android:key="@string/settings_order_by_key"
+        android:title="@string/settings_order_by_label" />
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="@string/settings_quick_delete_key"
+        android:title="@string/settings_quick_delete_title"
+        />
+
+    <!--TODO Add some preferences such as "Night Mode" and "Security +" -->
+
+</PreferenceScreen>
