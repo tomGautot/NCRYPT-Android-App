@@ -23,8 +23,6 @@ import be.patricegautot.ncrypt.customObjects.SavedEncryption;
 import be.patricegautot.ncrypt.helpers.Crypting;
 import be.patricegautot.ncrypt.helpers.Keys;
 
-// TODO : allow image encryption
-
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
